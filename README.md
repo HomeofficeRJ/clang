@@ -17,6 +17,9 @@ Now you can freely download the **Beta** version of the compiler, unzip the arch
 * [[C] Cross Compilation](/doc/cross-compilation.md)
 * [[P] Build Speed Boost](/doc/build-speed-boost.md)
 
+### Notes
+* Unlike canonical Clang where the default linker is `ld`, in our fork the default linker is `lld`. This approach is motivated by the fact that developers in the iterative build process spend a lot of time on linking, which `lld` performs faster, especially with our optimizations. You can change the linker in the standard way, for example `-fuse-ld=ld`.
+
 ### IDE
 Our fork can be freely used in all IDEs that work with standard Clang, such as CLion, Eclipse or VSCode. But we recommend using our Extensions for VSCode: [PowerTech C/C++](https://marketplace.visualstudio.com/items?itemName=PowerTech.powercpp) and [PowerTech Themes](https://marketplace.visualstudio.com/items?itemName=PowerTech.powerthemes). It's fast, free and convenient! In the extension settings, you can explicitly specify the path to the compiler.
 
